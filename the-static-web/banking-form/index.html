@@ -8,34 +8,39 @@
 			text-align: left;
 			display: block;
 		}
-
+		
+		.loan-length {
+			display: inline;
+			padding: 3px;
+		}
+	
 	</style>
 </head>
 <body>
 	<h1>Banking Loan Application</h1>
-		<form>
+		<form action="index.html" method="post">
 			<fieldset>
 				<legend>Personal Information</legend>
 					<label>First Name: </label>
-					<input type="text">
+					<input type="text" name="first-name" maxlength="35">
 
 					<label>Middle Initial: </label>
-					<input type="text">
+					<input type="text" name="middle-initial" maxlength="1">
 
 					<label>Last Name: </label>
-					<input type="text">
+					<input type="text" name="last-name" maxlength="35">
 
 					<label>Address: </label>
-					<input type="text">
+					<input type="text" name="address">
 
 					<label>Occupation: </label>
-					<input type="text">
+					<input type="text" name="occupation" maxlength="80">
 
 					<label>Employer: </label>
-					<input type="text">
+					<input type="text" name="employer" maxlength="80">
 
 					<label>Employer Address: </label>
-					<input type="text">
+					<input type="text" name="employer-address" maxlength="100">
 			</fieldset>
 
 			<fieldset>
@@ -53,15 +58,17 @@
 					<input type="text">
 
 					<label>Loan Length:</label>
-						<input type="radio" name="loan-length">5 years
-						<input type="radio" name="loan-length">15 years
-						<input type="radio" name="loan-length">30 years
+						<input class="loan-length" type="radio" name="loan-length"> 5 years
+						<input class="loan-length" type="radio" name="loan-length"> 15 years
+						<input class="loan-length" type="radio" name="loan-length"> 30 years
+						<br>
+					<label>Any Special Conditions? (Check any and all that may apply)</label>
 			</fieldset>
 
 			<fieldset>
-				<legend>AContact Information: </legend>
+				<legend>Contact Information: </legend>
 					<label>Additional Comments: </label>
-					<input type="textarea">
+					<textarea name="comments" cols="50" rows="8"></textarea><br>
 
 					<label>E-mail Address: </label>
 					<input type="email">
