@@ -3,80 +3,99 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Banking Form</title>
-	<style>
-		form, input {
-			text-align: left;
-			display: block;
-		}
-		
-		.loan-length {
-			display: inline;
-			padding: 3px;
-		}
-	
-	</style>
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 	<h1>Banking Loan Application</h1>
 		<form action="index.html" method="post">
-			<fieldset>
+
+			<fieldset>     <!-- Personal Information Section -->
 				<legend>Personal Information</legend>
-					<label>First Name: </label>
-					<input type="text" name="first-name" maxlength="35">
+					<label>First Name: 
+						<input type="text" name="first-name" maxlength="35" required="required">
+					</label>
 
-					<label>Middle Initial: </label>
-					<input type="text" name="middle-initial" maxlength="1">
+					<label>Middle Initial: 
+						<input type="text" name="middle-initial" maxlength="1">
+					</label>
 
-					<label>Last Name: </label>
-					<input type="text" name="last-name" maxlength="35">
+					<label>Last Name: 
+						<input type="text" name="last-name" maxlength="35" required="required">
+					</label>
 
-					<label>Address: </label>
-					<input type="text" name="address">
+					<label>Address: 
+						<input type="text" name="address" required="required">
+					</label>
 
-					<label>Occupation: </label>
-					<input type="text" name="occupation" maxlength="80">
+					<label>Occupation: 
+						<input type="text" name="occupation" maxlength="80" required="required">
+					</label>
 
-					<label>Employer: </label>
-					<input type="text" name="employer" maxlength="80">
+					<label>Employer: 
+						<input type="text" name="employer" maxlength="80" required="required">
+					</label>
 
-					<label>Employer Address: </label>
-					<input type="text" name="employer-address" maxlength="100">
+					<label>Employer Address: 
+						<input type="text" name="employer-address" maxlength="100" required="required">
+					</label>
 			</fieldset>
 
-			<fieldset>
-				<legend>Loan Information: </legend>
-					<label>Type of Loan:</label><br>
-						<select>
-						    <option selected="" disabled="disabled">Please Select One</option>
-						    <option>Commercial</option>
-							<option>Real Estate</option>
-							<option>Personal</option>
-							<option>Mortgage</option>
-						</select><br>
+
+			<fieldset>      <!-- Loan Information Section -->
+				<legend>Loan Information</legend>
+					<p>
+						<label for="loan-type">Type of Loan:</label>
+							<select name="loan-type" required="required">
+							    <option selected="" disabled="disabled">Please Select One</option>
+							    <option value="commercial">Commercial</option>
+								<option value="real-estate">Real Estate</option>
+								<option value="personal">Personal</option>
+								<option value="mortgage">Mortgage</option>
+							</select>
+					</p><br>
 					
-					<label>Requested Amount of Loan:</label>
-					<input type="text">
+					<label>Requested Amount of Loan: 
+						<input type="text" required="required">
+					</label>
 
-					<label>Loan Length:</label>
-						<input class="loan-length" type="radio" name="loan-length"> 5 years
-						<input class="loan-length" type="radio" name="loan-length"> 15 years
-						<input class="loan-length" type="radio" name="loan-length"> 30 years
-						<br>
-					<label>Any Special Conditions? (Check any and all that may apply)</label>
+					<label>Loan Length:
+						<input class="loan-length" type="radio" name="loan-length" value="5-years"> 5 years
+						<input class="loan-length" type="radio" name="loan-length" value="15-years"> 15 years
+						<input class="loan-length" type="radio" name="loan-length" value="30-years"> 30 years 
+					</label>
+					<br>
+
+					<p>
+						<label>Any Special Conditions? (Check any and all that may apply)
+							<input class="special-conditions" type="checkbox" name="special-conditions" value=""> I have a down payment
+							<input lass="special-conditions" type="checkbox" name="special-conditions" value=""> Out-of-state resident
+						<div id="conditions2">
+							<input lass="special-conditions" type="checkbox" name="special-conditions" value=""> Married
+							<input lass="special-conditions" type="checkbox" name="special-conditions" value=""> Loan will be cosigned 
+						</div>
+						</label>
+					</p><br>
+
+					<p>
+						<label>Additional Comments: 
+							<textarea name="comments" cols="45" rows="8"></textarea>
+						</label>
+					</p>
 			</fieldset>
 
-			<fieldset>
-				<legend>Contact Information: </legend>
-					<label>Additional Comments: </label>
-					<textarea name="comments" cols="50" rows="8"></textarea><br>
 
-					<label>E-mail Address: </label>
-					<input type="email">
+			<fieldset>     <!-- Contact Information Section -->
+				
+				<legend>Contact Information</legend>
+					<label>E-mail Address: 
+						<input type="email" name="email" maxlength="50" required="required">
+					</label>
 
-					<label>Telephone Number: </label>
-					<input type="tel">
+					<label>Telephone Number: 
+						<input type="tel" name="tel-number" maxlength="15" required="required">
+					</label>
 			</fieldset>
-
+			<button id="submit-btn">Submit Form</button>
 		</form>
 </body>
 </html>
