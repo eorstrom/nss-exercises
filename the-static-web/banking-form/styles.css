@@ -3,6 +3,7 @@ body {
 }
 
 input {
+    display: inline-block;
     border-radius: 5px;
     padding: 3px;
 }
@@ -27,6 +28,9 @@ h1 {
 }
 
 #submit-btn {
+    width: 8em;
     font-size: 1em; 
     border-radius: 2px;
+    margin: 0 auto;
+    text-align: center;
 }
