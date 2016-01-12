@@ -27,6 +27,26 @@ h1 {
     text-align: center;
 }
 
+.special-conditions input {
+    float: left;
+}
+
+input#email:valid {
+    background-color: green;
+}
+
+input#email:invalid {
+    background-color: red;
+}
+
+input#url:valid {
+    background-color: green;
+}
+
+input#url:invalid {
+    background-color: red;
+}
+
 #submit-btn {
     width: 8em;
     font-size: 1em; 

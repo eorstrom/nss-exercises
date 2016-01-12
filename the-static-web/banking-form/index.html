@@ -55,7 +55,7 @@
 					</p><br>
 					
 					<label>Requested Amount of Loan: 
-						<input type="text" required="required">
+						<input type="number" required="required">
 					</label>
 
 					<label>Loan Length:
@@ -65,13 +65,13 @@
 					</label>
 					<br>
 
-					<p>
+					<p class="conditions">
 						<label>Any Special Conditions? (Check any and all that may apply)
-							<input class="special-conditions" type="checkbox" name="special-conditions" value=""> I have a down payment
-							<input lass="special-conditions" type="checkbox" name="special-conditions" value=""> Out-of-state resident
+							<input class="special-conditions" type="checkbox" name="special-conditions" value="down-payment"> I have a down payment
+							<input lass="special-conditions" type="checkbox" name="special-conditions" value="out-of-state-resident"> Out-of-state resident
 						<div id="conditions2">
-							<input lass="special-conditions" type="checkbox" name="special-conditions" value=""> Married
-							<input lass="special-conditions" type="checkbox" name="special-conditions" value=""> Loan will be cosigned 
+							<input lass="special-conditions" type="checkbox" name="special-conditions" value="married"> Married
+							<input lass="special-conditions" type="checkbox" name="special-conditions" value="cosigned"> Loan will be cosigned 
 						</div>
 						</label>
 					</p><br>
@@ -88,11 +88,14 @@
 				
 				<legend>Contact Information</legend>
 					<label>E-mail Address: 
-						<input type="email" name="email" maxlength="50" required="required">
+						<input id="email" type="email" name="email" maxlength="50" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" required="required">
 					</label>
 
 					<label>Telephone Number: 
-						<input type="tel" name="tel-number" maxlength="15" required="required">
+						<input id="tel" type="tel" name="tel-number" maxlength="15" required="required">
+					<label>LinkedIn Profile:
+						<input id="url" type="url" name="linkedin"> 
+					</label>
 					</label>
 			</fieldset>
 			<button id="submit-btn">Submit Form</button>
