@@ -1,0 +1,51 @@
+header {
+    border: 1px solid #502A7E;
+}
+
+header ul li {
+    display: inline;
+    list-style-type: none;
+    padding: 10px;
+}
+
+.disabled {
+    color: grey;
+}
+
+a .disabled {
+    color: purple;
+}
+
+.active {
+    color: yellow;
+}
+
+.parent div:nth-child(1) {
+    color: red;
+}
+
+.parent div:nth-child(3) {
+    color: blue;
+}
+
+.parent div h4:nth-child(2) {
+    background-color: red;
+}
+
+.parent div h4:nth-child(4) {
+    background-color: blue;
+}
+
+.grandparent > h4 {
+    border: 1px solid green;
+    border-radius: 15px;
+}
+
+.promo {
+    font-weight: bold;
+    color: gold;
+}
+
+footer span input {
+    height: 25px;
+}
