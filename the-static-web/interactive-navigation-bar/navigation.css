@@ -1,0 +1,8 @@
+ul li a:hover {
+    color: purple;
+    background-color: yellow;
+}
+
+ul li a:active {
+    padding: 0 5px 0 5px; 
+}
