@@ -1,0 +1,9 @@
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0 1.5em 0 1.5em;
+}
+
+h2 {
+    text-align: center;
+}
