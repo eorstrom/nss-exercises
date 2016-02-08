@@ -2,12 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Calulator</title>
+    <title>Calculator</title>
 </head>
 <body>
     
-    <label>Please enter a number:<input type="number" id="num1"></label>
-    <label>Please enter another number:<input type="number" id="num2"></label>
+    <label>Please enter a number: <input type="number" id="num1"></label><br>
+    <label>Please enter another number: <input type="number" id="num2"></label>
 
+    <p>What operation do you want to perform on these numbers?</p>
+    <div id="buttons">
+        <button id="add">Add</button>
+        <button id="subtract">Subtract</button>
+        <button id="multiply">Multiply</button>
+        <button id="divide">Divide</button>
+    </div>
+
+    <div id="output"></div>
+
+<script src="calculator.js"></script>
 </body>
 </html>
