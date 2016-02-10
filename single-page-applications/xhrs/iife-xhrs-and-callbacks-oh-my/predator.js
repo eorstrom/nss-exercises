@@ -1,19 +1,23 @@
 var Predator = (function () {
-  var carnivores = [];
+  var privateCarnivores = [];
 
   return {
-    loadCarnivores: function (callbackToInvoke) {
+    loadCarnivores: function (callbackFunction) {
+      // Create an XHR to load carnivores
       var loader = new XMLHttpRequest();
 
+      // Listen for when the load event is broadcast
+      // and execute an anonymous callback
       loader.addEventListener("load", function () {
         // Set the value of the private array
-        carnivores = JSON.parse(this.responseText);
+          privateCarnivores = JSON.parse(this.responseText).carnivores;
+          console.log("private Carnivores", privateCarnivores);
 
-        // Invoke the callback function so that the caller knows
-        // that the process is complete. Make sure to pass the 
-        // carnivore array as an argument.
-
+          callbackFunction(privateCarnivores);
       });
+
+      loader.open("GET", "carnivores.json");
+      loader.send();
     }
   }
 })();

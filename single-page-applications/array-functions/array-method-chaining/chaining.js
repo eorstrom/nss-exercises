@@ -8,3 +8,13 @@ Then output (either in the DOM or the console) the sum of all the resulting numb
 */
 
 var integers = [13, 25, 6, 3, 11, 2, 18, 7, 21, 1, 29, 20, 12, 8];
+
+function filterIntegers(element, index, array) {
+    if (index > 19) {
+        var remove = index.unshift();
+    }
+    console.log(remove);
+}
+
+var stuffDone = integers.sort(function(first, second) { return second - first; }).filter(filterIntegers);
+console.log("stuffDone", stuffDone);

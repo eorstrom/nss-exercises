@@ -1,5 +1,4 @@
-/*
-Instructions
+/* Instructions
 
 Copy the code below into the JavaScript file
 In your HTML, create an text input and a button.
@@ -11,10 +10,32 @@ When the user presses the enter key in the text input, or clicks the button, set
 The output of each of the functions should immediately appear as well.
 */
 
-function reversal() {
+var stringInput;
+var submitButton = document.getElementById("submit");
+var reverseButton = document.getElementById("reverse");
+var splitString;
 
-}
+submitButton.addEventListener("click", function() {
+    stringInput = document.getElementById("string-input").value;
+    splitString = stringInput.split("");
+    console.log("splitString", splitString);
+        for (var i = 0; i < splitString.length; i++) { 
+            if (splitString[i].indexof()) === "number") {
+                alert("Please only enter letters.");
+            }
+        console.log("stringInput", stringInput);
+        }
+    return splitString
+    console.log("splitString", splitString);
+});
 
+
+reverseButton.addEventListener("click", function() {
+    var reverseString = splitString.reverse();
+    document.getElementById("output").innerHTML = reverseString;
+});
+
+/*
 function alphabits() {
 
 }
@@ -27,3 +48,4 @@ var testString = "";
 reversal(testString);
 alphabits(testString);
 palindrome(testString);
+*/
