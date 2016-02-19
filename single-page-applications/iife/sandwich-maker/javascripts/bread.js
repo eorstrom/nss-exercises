@@ -10,16 +10,14 @@ var SandwichMaker = (function(sandwich) {
         "Gluten-Free": 0.75,
         "No Bread": 0.00
   };
-  var breadPrice;
     console.log("breadPrices", breadPrices);
   // Augment the original object with another method
   sandwich.addBread = function(userChoice) {
-    breadPrice = breadPrices.userChoice;
+    breadPrice = breadPrices[userChoice];
     SandwichMaker.addTopping(breadPrice);
   };
 
-  sandwich.removeBread = function(userChoice) {
-    breadPrice = breadPrices[userChoice];
+  sandwich.removeBread = function() {
     SandwichMaker.removeTopping(breadPrice);
   }
 

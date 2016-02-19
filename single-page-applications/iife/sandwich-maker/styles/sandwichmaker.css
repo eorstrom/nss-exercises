@@ -5,3 +5,24 @@ label {
 #sandwich-button {
     font-size: 1.1em;
 }
+
+#left {
+    float: left;
+}
+
+#right {
+    float: right;
+}
+
+button#sandwich-button, div#sandwichOutput {
+    float: left;
+    clear: both;
+}
+
+button#sandwich-button {
+    margin: 5% 0;
+}
+
+h4 {
+    display: inline;
+}

@@ -13,7 +13,7 @@ var SandwichMaker = (function(sandwich) {
     console.log("cheesePrices", cheesePrices);
   // Augment the original object with another method
   sandwich.addCheese = function(userChoice) {
-    cheesePrice = cheesePrices.userChoice;
+    cheesePrice = cheesePrices[userChoice];
     SandwichMaker.addTopping(cheesePrice);
   };
 

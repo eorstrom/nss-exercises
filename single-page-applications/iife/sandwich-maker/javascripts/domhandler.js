@@ -19,7 +19,7 @@ var condimentItems = document.getElementsByClassName("condiment");
         console.log("condimentItems", condimentItems);
 
 sandwichButton.addEventListener("click", function(){
-    sandwichOutput.innerHTML = `$${SandwichMaker.getPrice()}`; 
+    sandwichOutput.innerHTML = `<h4>Final Price: </h4>$${SandwichMaker.getPrice()}`; 
 });
 /* 
   A <select> element broadcasts a change event, so you listen for it
@@ -27,13 +27,14 @@ sandwichButton.addEventListener("click", function(){
 */
 breadChooser.addEventListener("change", function(event) {
   // Get the value chosen from the DOM
-  selectedTopping = event.target.value;
-  console.log("selectedTopping", selectedTopping);
-  // Determine the price of the topping chosen
-
+    SandwichMaker.removeBread();
+    SandwichMaker.addBread(event.currentTarget.value);
+  // Determine the price of the topping chosen  
   // Add the topping to the SandwichMaker to increase the total price
+    sandwichOutput.innerHTML = `<h4>Final Price: </h4>$${SandwichMaker.getPrice()}`;
 });
 
+// Iterating through meatItems
 for (var i = 0; i < meatItems.length; i++) {
     currentMeat = meatItems[i];
     currentMeat.addEventListener("click", function(e) {
@@ -43,6 +44,45 @@ for (var i = 0; i < meatItems.length; i++) {
         } else if (e.currentTarget.checked == false) {
             SandwichMaker.removeMeat(e.currentTarget.value)
         }
-    sandwichOutput.innerHTML = `$${SandwichMaker.getPrice()}`;
+    sandwichOutput.innerHTML = `<h4>Final Price: </h4>$${SandwichMaker.getPrice()}`;
+    });
+}
+// Iterating through cheeseItems
+for (var i = 0; i < cheeseItems.length; i++) {
+    currentCheese = cheeseItems[i];
+    currentCheese.addEventListener("click", function(e) {
+        console.log("did a thing");
+        if (e.currentTarget.checked) {
+            SandwichMaker.addCheese(e.currentTarget.value)
+        } else if (e.currentTarget.checked == false) {
+            SandwichMaker.removeCheese(e.currentTarget.value)
+        }
+    sandwichOutput.innerHTML = `<h4>Final Price: </h4>$${SandwichMaker.getPrice()}`;
+    });
+}
+// Iterating through veggieItems
+for (var i = 0; i < veggieItems.length; i++) {
+    currentVeggie = veggieItems[i];
+    currentVeggie.addEventListener("click", function(e) {
+        console.log("did a thing");
+        if (e.currentTarget.checked) {
+            SandwichMaker.addVeggie(e.currentTarget.value)
+        } else if (e.currentTarget.checked == false) {
+            SandwichMaker.removeVeggie(e.currentTarget.value)
+        }
+    sandwichOutput.innerHTML = `<h4>Final Price: </h4>$${SandwichMaker.getPrice()}`;
+    });
+}
+// Iterating through condimentItems
+for (var i = 0; i < condimentItems.length; i++) {
+    currentCondiment = condimentItems[i];
+    currentCondiment.addEventListener("click", function(e) {
+        console.log("did a thing");
+        if (e.currentTarget.checked) {
+            SandwichMaker.addCondiment(e.currentTarget.value)
+        } else if (e.currentTarget.checked == false) {
+            SandwichMaker.removeCondiment(e.currentTarget.value)
+        }
+    sandwichOutput.innerHTML = `<h4>Final Price: </h4>$${SandwichMaker.getPrice()}`;
     });
 }
