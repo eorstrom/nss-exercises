@@ -13,15 +13,12 @@ checkWordCount("Hello there Erin");
 
 function duplicateCheck(string) {
     // ?????? this does not work
-    var uniqueListIndex = string.split(',').filter(function(currentItem,i,allItems) {
-        if (i == allItems.indexOf(currentItem)) {
-            console.log("there were duplicates");;
-        } else {
-            console.log(string);
-        }
-    });
-
-    var uniqueList=uniqueListIndex.join(',');
+    var inputString = .unique(string.split(","));
+    if (.unique(inputString)) {
+        console.log(inputString);
+    } else {
+        return false;
+    }
 };
 
 duplicateCheck("hi there friend");
